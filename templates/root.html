@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Home Page Optometrist</title>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <h3 style="text-align:center">{{ message }}</h3>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<div style="text-align:center">
+  <h1>Young's Home Page Optometrist</h1>
+  <p>
+  <h2>Welcome to Young's Home Page Optometrist, <br> your finest virtual optometrist!</h2>
+  <p>We'll find the profile image in the website of your url and put some nice looking pair of glasses to them.</p>
+  <p>If you know what it means... *wink*</p>
+    <form method="GET" action="{{ url_for('view_page') }}">
+      <input type="text" name="url" size="80" value="Put your url in me"><br><br>
+
+      <div>Select frame color</div><br>
+        <div>
+          <span><label><input type="radio" name="color" value="black" checked>Black</label></span>
+          <span><label><input type="radio" name="color" value="red">Red</label></span>
+          <span><label><input type="radio" name="color" value="green">Green</label></span>
+          <span><label><input type="radio" name="color" value="blue">Blue</label></span>
+          <span><label><input type="radio" name="color" value="white">White</label></span>
+        </div>
+      </br><br>
+      <div><input type="submit" value="Submit"></div>
+    </form>
+
+
+  </p>
+</div>
+</body>
+</html>
