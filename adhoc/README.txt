@@ -1,0 +1,1 @@
+This directory adhoc is present for the possible extension addition to the project.
